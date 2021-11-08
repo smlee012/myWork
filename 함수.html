@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 function</title>
+</head>
+
+<body>
+    <h1>예제 1</h1>
+    <script>
+        function calRemainLife(age) {
+            var days = (90 - age) * 365;
+            var weeks = (90 - age) * 52;
+            var months = (90 - age) * 12;
+            console.log(days + '일, ' + weeks + '주, ' + months + '달 남았습니다.');
+        }
+    </script>
+    <h1>익명함수</h1>
+    <script>
+        //익명함수기 때문에 호출할 이름이 없음 => 변수에 대입하면 변수명으로 호출가능
+        // var plusTen = function(){
+        //     var num = prompt('숫자를 입력해주세요');
+        //     alert(Number(num) + 10); // 입력된 숫자(문자열)를 숫자로 변환해서 + 10
+        // };
+
+        // setTimeout(function(){
+        //     alert('하이');
+        // } , 3000);
+
+        // setInterval(function () {
+        //     alert('하이');
+        // }, 1000)
+    </script>
+    <h1>예제 2</h1>
+    <script>
+        //ask 함수는 매개변수 yes, no 는 콜백함수이다.
+        function ask(q, yes, no){
+            if(confirm(q)) yes(); //확인 눌렀을때
+            else no();            //취소 눌렀을때
+        }
+        function agree(){
+            alert('동의합니다.');
+        }
+        function cancle(){
+            alert('취소합니다.');
+        }
+    </script>
+</body>
+
+</html>
